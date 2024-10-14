@@ -48,7 +48,7 @@ Testing cascadercnn on 2 gpus. ```show-dir``` saves the plots in the mentioned d
 
 
 ## Results 
-Trained on doclaynet for 12 epochs on all 11 categories
+Trained on doclaynet for 12 epochs on all 11 categories. These results are on doclaynet test set.
 
 | Metrices | Area | Scores |
 | :----------- | :----------- | :----------- |
