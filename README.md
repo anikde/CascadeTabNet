@@ -46,6 +46,25 @@ Testing cascadercnn on 2 gpus. ```show-dir``` saves the plots in the mentioned d
 ./tools/dist_test.sh  configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py work_dirs/cascade-rcnn_r50_fpn_1x_coco/epoch_12.pth 2 --out results.pkl --cfg-options test.evaluator.classwise=True --show-dir doclaynet_results --work-dir doclaynet_eval
 ```
 
+
+## Results 
+Trained on doclaynet for 12 epochs on all 11 categories
+
+| Metrices | Area | Scores |
+| :----------- | :----------- | :----------- |
+| Average Precision  (AP) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.566  |
+| Average Precision  (AP) @[ IoU=0.50      | area=   all | maxDets=1000 ] = 0.710 |
+| Average Precision  (AP) @[ IoU=0.75      | area=   all | maxDets=1000 ] = 0.611 |
+| Average Precision  (AP) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.419 |
+| Average Precision  (AP) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.416 |
+| Average Precision  (AP) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.689 |
+| Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=100 ] = 0.645  |
+| Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=300 ] = 0.645  |
+| Average Recall     (AR) @[ IoU=0.50:0.95 | area=   all | maxDets=1000 ] = 0.645 |
+| Average Recall     (AR) @[ IoU=0.50:0.95 | area= small | maxDets=1000 ] = 0.509 |
+| Average Recall     (AR) @[ IoU=0.50:0.95 | area=medium | maxDets=1000 ] = 0.515 |
+| Average Recall     (AR) @[ IoU=0.50:0.95 | area= large | maxDets=1000 ] = 0.771 |
+
 ## FAQs
 The following [github issue](https://github.com/open-mmlab/mmdetection/issues/9610) solved the problem
 ```
