@@ -39,6 +39,13 @@ cd mmdetection
 ./tools/dist_train.sh configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py 2 
 ```
 
+## Testing
+
+Testing cascadercnn on 2 gpus. ```show-dir``` saves the plots in the mentioned directory.
+```
+./tools/dist_test.sh  configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py work_dirs/cascade-rcnn_r50_fpn_1x_coco/epoch_12.pth 2 --out results.pkl --cfg-options test.evaluator.classwise=True --show-dir doclaynet_results --work-dir doclaynet_eval
+```
+
 ## FAQs
 The following [github issue](https://github.com/open-mmlab/mmdetection/issues/9610) solved the problem
 ```
