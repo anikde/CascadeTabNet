@@ -34,16 +34,21 @@ bash ./tools/dist_train.sh \
     ${GPU_NUM} \
     [optional arguments]
 ```
+add ```--work-dir``` argument to save all the generated files in a particular directory.
 ```
 cd mmdetection
-./tools/dist_train.sh configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py 2 
+./tools/dist_train.sh configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py 2 \
+    --work-dirs doclaynet_table_files
 ```
 
 ## Testing
 
 Testing cascadercnn on 2 gpus. ```show-dir``` saves the plots in the mentioned directory.
 ```
-./tools/dist_test.sh  configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py work_dirs/cascade-rcnn_r50_fpn_1x_coco/epoch_12.pth 2 --out results.pkl --cfg-options test.evaluator.classwise=True --show-dir doclaynet_results --work-dir doclaynet_eval
+./tools/dist_test.sh  configs/cascade_rcnn/cascade-rcnn_r50_fpn_1x_coco.py \
+    work_dirs/cascade-rcnn_r50_fpn_1x_coco/epoch_12.pth 2 \
+    --out results.pkl --cfg-options test.evaluator.classwise=True \
+    --show-dir doclaynet_results --work-dir doclaynet_eval
 ```
 
 
